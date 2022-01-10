@@ -42,11 +42,12 @@ export default class BooksManager {
   saveBooks() {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
-  createHtml(parent, tag) {
+
+  createHtml = (parent, tag) => {
     const element = document.createElement(tag);
     parent.appendChild(element);
     return element;
-  }
+  };
 
   displayBooks() {
     this.BOOK_COLLECTION.innerText = '';

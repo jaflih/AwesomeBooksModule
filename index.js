@@ -2,25 +2,26 @@
 import Book from './modules/book.js';
 import BooksManager from './modules/booksmanager.js';
 
+const SMALL = document.querySelector('small');
 const FORM = document.querySelector('form');
 const MANAGER = new BooksManager([]);
 
 document.querySelector('#add_button').addEventListener('click', (event) => {
   event.preventDefault();
-  const small = document.querySelector('small');
+
   if (FORM.title.validity.valueMissing) {
-    small.innerHTML = 'You need to enter an Title';
-    small.classList.remove('collapse');
+    SMALL.innerHTML = 'You need to enter an Title';
+    SMALL.classList.remove('collapse');
   } else if (FORM.author.validity.valueMissing) {
-    small.innerHTML = 'You need to enter an Author';
-    small.classList.remove('collapse');
+    SMALL.innerHTML = 'You need to enter an Author';
+    SMALL.classList.remove('collapse');
   } else {
     MANAGER.incrementCounter();
     MANAGER.addBook(
-      new Book(MANAGER.counter, FORM.title.value, FORM.author.value)
+      new Book(MANAGER.counter, FORM.title.value, FORM.author.value),
     );
     FORM.reset();
-    small.classList.add('collapse');
+    SMALL.classList.add('collapse');
   }
 });
 
