@@ -1,7 +1,8 @@
 /* eslint-disable max-classes-per-file */
+// import { DateTime } from 'luxon/build/es6/luxon';
 import Book from './modules/book.js';
 import BooksManager from './modules/booksmanager.js';
-import Now from './modules/time.js';
+import Date from './modules/time.js';
 
 const SMALL = document.querySelector('small');
 const FORM = document.querySelector('form');
@@ -56,4 +57,5 @@ document.querySelector('#list').addEventListener('click', () => {
   document.querySelector('#contact-information').classList.add('collapse');
 });
 
-document.querySelector('.date').innerHTML = Now.now().toString();
+console.log(Date);
+document.querySelector('.date').innerHTML = Date;

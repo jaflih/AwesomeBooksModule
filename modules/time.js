@@ -1,5 +1,6 @@
-import { DateTime } from '../node_modules/luxon';
+// const DateTime = require('luxon');
+import { DateTime } from '../node_modules/luxon/build/es6/luxon.js';
 
-const Now = DateTime.now();
+const Date = DateTime.now().toHTTP();
 
-export default Now;
+export default Date;
