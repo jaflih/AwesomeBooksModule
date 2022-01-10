@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-// import { DateTime } from 'luxon/build/es6/luxon';
 import Book from './modules/book.js';
 import BooksManager from './modules/booksmanager.js';
 import Date from './modules/time.js';
@@ -19,9 +17,7 @@ document.querySelector('#add_button').addEventListener('click', (event) => {
     SMALL.classList.remove('collapse');
   } else {
     MANAGER.incrementCounter();
-    MANAGER.addBook(
-      new Book(MANAGER.counter, FORM.title.value, FORM.author.value),
-    );
+    MANAGER.addBook(new Book(MANAGER.counter, FORM.title.value, FORM.author.value));
     FORM.reset();
     SMALL.classList.add('collapse');
   }
