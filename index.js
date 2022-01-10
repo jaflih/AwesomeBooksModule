@@ -25,7 +25,6 @@ document.querySelector('#add_button').addEventListener('click', (event) => {
 
 MANAGER.loadBooks();
 
-//
 document.querySelector('#add_new').addEventListener('click', () => {
   document.querySelector('#add_new').style.color = 'rgb(58, 169, 206)';
   document.querySelector('#list').style.color = 'black';
