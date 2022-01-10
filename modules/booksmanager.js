@@ -5,26 +5,26 @@ export default class BooksManager {
     this.BOOK_COLLECTION = document.querySelector('#book_collection');
   }
 
-  incrementCounter() {
+  incrementCounter = () => {
     this.counter += 1;
-  }
+  };
 
-  addBook(book) {
+  addBook = (book) => {
     this.books.push(book);
     this.displayBooks();
     this.saveBooks();
-  }
+  };
 
-  removeBook(index) {
+  removeBook = (index) => {
     this.books = this.books.filter((book) => book.id !== index);
     this.displayBooks();
     this.saveBooks();
     if (this.books.length === 0) {
       this.BOOK_COLLECTION.innerHTML = 'No books found.';
     }
-  }
+  };
 
-  loadBooks() {
+  loadBooks = () => {
     if (localStorage.getItem('books') != null) {
       this.books = JSON.parse(localStorage.getItem('books'));
       if (this.books.length === 0) {
@@ -37,11 +37,9 @@ export default class BooksManager {
     } else {
       this.BOOK_COLLECTION.innerHTML = 'No books found.';
     }
-  }
+  };
 
-  saveBooks() {
-    localStorage.setItem('books', JSON.stringify(this.books));
-  }
+  saveBooks = () => localStorage.setItem('books', JSON.stringify(this.books));
 
   createHtml = (parent, tag) => {
     const element = document.createElement(tag);
@@ -49,7 +47,7 @@ export default class BooksManager {
     return element;
   };
 
-  displayBooks() {
+  displayBooks = () => {
     this.BOOK_COLLECTION.innerText = '';
 
     this.books.forEach((book) => {
@@ -64,5 +62,5 @@ export default class BooksManager {
         this.removeBook(book.id);
       });
     });
-  }
+  };
 }
