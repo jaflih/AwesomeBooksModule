@@ -1,6 +1,7 @@
 /* eslint-disable max-classes-per-file */
 import Book from './modules/book.js';
 import BooksManager from './modules/booksmanager.js';
+import Now from './modules/time.js';
 
 const SMALL = document.querySelector('small');
 const FORM = document.querySelector('form');
@@ -18,7 +19,7 @@ document.querySelector('#add_button').addEventListener('click', (event) => {
   } else {
     MANAGER.incrementCounter();
     MANAGER.addBook(
-      new Book(MANAGER.counter, FORM.title.value, FORM.author.value),
+      new Book(MANAGER.counter, FORM.title.value, FORM.author.value)
     );
     FORM.reset();
     SMALL.classList.add('collapse');
@@ -55,4 +56,4 @@ document.querySelector('#list').addEventListener('click', () => {
   document.querySelector('#contact-information').classList.add('collapse');
 });
 
-document.querySelector('.date').innerHTML = new Date();
+document.querySelector('.date').innerHTML = Now.now().toString();
