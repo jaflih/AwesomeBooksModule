@@ -1,37 +1,3 @@
-/* eslint-disable no-fallthrough */
-/* eslint-disable no-useless-escape */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable new-cap */
-/* eslint-disable no-redeclare */
-/* eslint-disable eqeqeq */
-/* eslint-disable no-restricted-properties */
-/* eslint-disable consistent-return */
-/* eslint-disable func-names */
-/* eslint-disable no-empty */
-/* eslint-disable no-func-assign */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-sequences */
-/* eslint-disable no-loop-func */
-/* eslint-disable max-len */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable default-case */
-/* eslint-disable no-void */
-/* eslint-disable no-multi-assign */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable prefer-spread */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable block-scoped-var */
-/* eslint-disable no-cond-assign */
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-var */
-/* eslint-disable no-unreachable */
-/* eslint-disable no-return-assign */
-/* eslint-disable guard-for-in */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-rest-params */
-/* eslint-disable no-plusplus */
-/* eslint-disable vars-on-top */
 // these aren't really private, but nor are they really useful to document
 
 /**
