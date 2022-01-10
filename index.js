@@ -20,7 +20,7 @@ document.querySelector('#add_button').addEventListener('click', (event) => {
   } else {
     MANAGER.incrementCounter();
     MANAGER.addBook(
-      new Book(MANAGER.counter, FORM.title.value, FORM.author.value)
+      new Book(MANAGER.counter, FORM.title.value, FORM.author.value),
     );
     FORM.reset();
     SMALL.classList.add('collapse');
@@ -57,5 +57,4 @@ document.querySelector('#list').addEventListener('click', () => {
   document.querySelector('#contact-information').classList.add('collapse');
 });
 
-console.log(Date);
 document.querySelector('.date').innerHTML = Date;
